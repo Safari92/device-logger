@@ -9,6 +9,9 @@ app.use(bodyParser.json());
 app.get('/:channel_id', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 });
+/**
+ * Puts the request body/query to the response
+ */
 app.all('/send/:channel_id', function(req, res) {
 	var result = {};
 	for (key in req.body) {
